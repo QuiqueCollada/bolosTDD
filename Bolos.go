@@ -3,13 +3,16 @@ package main
 func CalcularPuntuacion(partida [20]int) int{
 
  resultado := 0  
- 	for _, v := range partida {  
- 	 resultado += v  
- 	} 
 
- 	if partida[0] == 10 {
- 		resultado = resultado + partida[1] + partida[2]
- 	}
+  for i := 0; i < len(partida); i++ { 
+
+  	if partida[i] == 10 {
+  		resultado += partida[i]  
+ 		resultado = resultado + partida[i+1] + partida[i+2]
+  	} else {
+  		resultado += partida[i] 
+  	}
+  }
 
  return resultado  
 }

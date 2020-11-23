@@ -45,3 +45,17 @@ func Test_strike(t *testing.T) {
         t.Errorf("got '%v' expected '%v'", got, expected)
     }
 }
+
+func Test_strike2(t *testing.T) {
+
+	partida := [20]int{0,0,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+	resultado := CalcularPuntuacion(partida)
+
+	expected := 12
+	got := resultado
+
+	if expected != got {
+        t.Errorf("got '%v' expected '%v'", got, expected)
+    }
+}
