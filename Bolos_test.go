@@ -74,3 +74,17 @@ func Test_spare(t *testing.T) {
     }
 }
 
+func Test_spare_y_strike(t *testing.T) {
+
+	partida := [20]int{0,10,10,0,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+	resultado := CalcularPuntuacion(partida)
+
+	expected := 38
+	got := resultado
+
+	if expected != got {
+        t.Errorf("got '%v' expected '%v'", got, expected)
+    }
+}
+
