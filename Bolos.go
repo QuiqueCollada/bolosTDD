@@ -1,7 +1,10 @@
 package main
 
-func CalcularPuntuacion([20]int) int{
+func CalcularPuntuacion(partida [20]int) int{
 
-	return 20
-
+ resultado := 0  
+ 	for _, v := range partida {  
+ 	 resultado += v  
+ 	}  
+ return resultado  
 }
