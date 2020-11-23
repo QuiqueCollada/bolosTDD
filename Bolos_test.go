@@ -4,9 +4,13 @@ import (
 	"testing"
 )
 
-func TestIngredienteBorradoConExito(t *testing.T) {
+func Test_suma_puntos_partida_cualquiera(t *testing.T) {
 
-	expected := 0
+	partida := [20]int{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+
+	resultado := CalcularPuntuacion(partida)
+
+	expected := 20
     got := resultado
 
     if expected != got {
