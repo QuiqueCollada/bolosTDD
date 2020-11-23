@@ -38,7 +38,7 @@ func Test_strike(t *testing.T) {
 
 	resultado := CalcularPuntuacion(partida)
 
-	expected := 13
+	expected := 14
 	got := resultado
 
 	if expected != got {
@@ -48,7 +48,7 @@ func Test_strike(t *testing.T) {
 
 func Test_strike2(t *testing.T) {
 
-	partida := [20]int{0,0,10,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+	partida := [20]int{0,0,10,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 
 	resultado := CalcularPuntuacion(partida)
 
@@ -60,16 +60,3 @@ func Test_strike2(t *testing.T) {
     }
 }
 
-func Test_strike_solo_suma_si_primer_intento(t *testing.T) {
-
-	partida := [20]int{0,10,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
-
-	resultado := CalcularPuntuacion(partida)
-
-	expected := 11
-	got := resultado
-
-	if expected != got {
-        t.Errorf("got '%v' expected '%v'", got, expected)
-    }
-}
