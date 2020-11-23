@@ -60,3 +60,17 @@ func Test_strike2(t *testing.T) {
     }
 }
 
+func Test_spare(t *testing.T) {
+
+	partida := [20]int{0,10,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+	resultado := CalcularPuntuacion(partida)
+
+	expected := 13
+	got := resultado
+
+	if expected != got {
+        t.Errorf("got '%v' expected '%v'", got, expected)
+    }
+}
+
