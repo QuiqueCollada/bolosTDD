@@ -59,3 +59,17 @@ func Test_strike2(t *testing.T) {
         t.Errorf("got '%v' expected '%v'", got, expected)
     }
 }
+
+func Test_strike_solo_suma_si_primer_intento(t *testing.T) {
+
+	partida := [20]int{0,10,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+
+	resultado := CalcularPuntuacion(partida)
+
+	expected := 11
+	got := resultado
+
+	if expected != got {
+        t.Errorf("got '%v' expected '%v'", got, expected)
+    }
+}
